@@ -8,11 +8,13 @@ var galleryThumbs = new Swiper('.gallery-thumbs', {
       centerInsufficientSlides: true,
       direction: 'vertical',
       slideToClickedSlide: true,
+      freeMode: true,
+      watchSlidesProgress: true,
     },
     768: {
       direction: 'horizontal',
       spaceBetween: 0,
-      slidesPerView: 3,
+      slidesPerView: 4,
       allowTouchMove: false,
       watchSlidesVisibility: false,
       watchSlidesProgress: false,
@@ -44,10 +46,10 @@ const myswiper = new Swiper('.swiper', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  // autoplay: {
-  //   delay: 4500,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 4500,
+    disableOnInteraction: false,
+  },
 
   on: {
     slideChange: function () {
@@ -67,3 +69,18 @@ const myswiper = new Swiper('.swiper', {
   }
 
 });
+
+
+// color active 
+
+let btnActive = document.getElementsByClassName('first-screen__shift');
+let btns = document.getElementsByClassName('btn')
+
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("btn-active");
+  current[0].className = current[0].className.replace(" btn-active", "");
+  this.className += " btn-active";
+  document.getElementsByTagName('html').style.backgroundColor = 'red';
+  });
+}
