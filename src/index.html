@@ -1,27 +1,61 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="theme-color" content="#111111">
-  <title>New site</title>
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/vendor.css">
-  <link rel="stylesheet" href="css/main.css">
-</head>
-
-<body>
-  <div class="site-container">
-    @include('partials/header.html')
-    <img src="img/cover.jpg" alt="Обложка" style="width: 100%;">
-    @include('partials/footer.html')
-    <!-- @include('html/h1.html') пример инклуда -->
-  </div>
-  <script src="js/vendor.js"></script>
-  <script src="js/main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#111111">
+    <title>Masks Dev</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+      />
+  </head>
+   
+  <body>
+    <div id="app">
+      <section class="first-screen">
+        <div class="first-screen__column">
+        </div>
+        <div class="first-screen__column">
+          <div class="first-screen__slider">
+            <!-- Slider main container -->
+            <div class="swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                @include('partials/sliders/slide-1.html')
+                @include('partials/sliders/slide-2.html')
+                @include('partials/sliders/slide-3.html')
+                @include('partials/sliders/slide-4.html')
+              </div>
+            </div>
+            @include('partials/pagination.html')
+          </div>
+        </div>
+        <div class="first-screen__column">
+          <div class="first-screen__shift">
+            <button class="btn btn-active">Masks</button>
+            <button class="btn">Video</button>
+          </div>
+        </div>
+        <div class="first-screen__column">
+          <div class="first-screen__plus"></div>
+          <div class="first-screen__action">
+            <button class="btn btn-clear">Connect Wallet</button>
+            <button class="btn">Add Mask</button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="js/vendor.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 
 </html>
