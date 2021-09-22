@@ -81,6 +81,5 @@ for (var i = 0; i < btns.length; i++) {
   var current = document.getElementsByClassName("btn-active");
   current[0].className = current[0].className.replace(" btn-active", "");
   this.className += " btn-active";
-  document.getElementsByTagName('html').style.backgroundColor = 'red';
   });
 }
