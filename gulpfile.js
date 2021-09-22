@@ -19,7 +19,7 @@ const image = require('gulp-image');
 const { readFileSync } = require('fs');
 const concat = require('gulp-concat');
 var gulp = require('gulp');
-
+ 
 let isProd = false; // dev by default
 
 const clean = () => {
