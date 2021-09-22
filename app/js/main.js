@@ -1,1 +1,89 @@
-"use strict";var _Swiper;function _defineProperty(e,i,t){return i in e?Object.defineProperty(e,i,{value:t,enumerable:!0,configurable:!0,writable:!0}):e[i]=t,e}for(var galleryThumbs=new Swiper(".gallery-thumbs",(_defineProperty(_Swiper={watchSlidesVisibility:!0,watchSlidesProgress:!0,centerInsufficientSlides:!0,slideToClickedSlide:!0,freeMode:!0},"watchSlidesProgress",!0),_defineProperty(_Swiper,"draggable",!1),_defineProperty(_Swiper,"allowTouchMove",!1),_defineProperty(_Swiper,"slidesPerView",4),_defineProperty(_Swiper,"breakpoints",{1200:{direction:"vertical",spaceBetween:0,slidesPerView:4},1199:{direction:"horizontal",spaceBetween:0,slidesPerView:4},768:{direction:"horizontal",spaceBetween:0,slidesPerView:4,allowTouchMove:!1,watchSlidesVisibility:!1,watchSlidesProgress:!1,centerInsufficientSlides:!1,draggable:!1}}),_Swiper)),myswiper=new Swiper(".swiper",{spaceBetween:20,breakpoints:{1200:{direction:"vertical",loop:!1,allowTouchMove:!1},1199:{direction:"horizontal",loop:!1,allowTouchMove:!1},768:{direction:"horizontal",allowTouchMove:!1,touchRatio:0}},thumbs:{swiper:galleryThumbs},on:{slideChange:function(){var e=this.activeIndex+1,i=(document.querySelector(".gallery-thumbs .swiper-slide:nth-child(".concat(e,")")),document.querySelector(".gallery-thumbs .swiper-slide:nth-child(".concat(e+1,")"))),t=document.querySelector(".gallery-thumbs .swiper-slide:nth-child(".concat(e-1,")"));i&&!i.classList.contains("swiper-slide-visible")?this.thumbs.swiper.slideNext():t&&!t.classList.contains("swiper-slide-visible")&&this.thumbs.swiper.slidePrev()}}}),btnActive=document.getElementsByClassName("first-screen__shift"),btns=document.getElementsByClassName("btn"),i=0;i<btns.length;i++)btns[i].addEventListener("click",(function(){var e=document.getElementsByClassName("btn-active");e[0].className=e[0].className.replace(" btn-active",""),this.className+=" btn-active"}));
+"use strict";
+"use strict";
+
+var _Swiper;
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var galleryThumbs = new Swiper('.gallery-thumbs', (_Swiper = {
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
+  centerInsufficientSlides: true,
+  slideToClickedSlide: true,
+  freeMode: true
+}, _defineProperty(_Swiper, "watchSlidesProgress", true), _defineProperty(_Swiper, "draggable", false), _defineProperty(_Swiper, "allowTouchMove", false), _defineProperty(_Swiper, "slidesPerView", 4), _defineProperty(_Swiper, "breakpoints", {
+  1200: {
+    direction: 'vertical',
+    spaceBetween: 0,
+    slidesPerView: 4
+  },
+  1199: {
+    direction: 'horizontal',
+    spaceBetween: 0,
+    slidesPerView: 4
+  },
+  768: {
+    direction: 'horizontal',
+    spaceBetween: 0,
+    slidesPerView: 4,
+    allowTouchMove: false,
+    watchSlidesVisibility: false,
+    watchSlidesProgress: false,
+    centerInsufficientSlides: false,
+    draggable: false
+  }
+}), _Swiper));
+var myswiper = new Swiper('.swiper', {
+  spaceBetween: 20,
+  breakpoints: {
+    1200: {
+      direction: 'vertical',
+      loop: false,
+      allowTouchMove: false
+    },
+    1199: {
+      direction: 'horizontal',
+      loop: false,
+      allowTouchMove: false
+    },
+    768: {
+      direction: 'horizontal',
+      allowTouchMove: false,
+      touchRatio: 0
+    }
+  },
+  // If we need pagination
+  thumbs: {
+    swiper: galleryThumbs
+  },
+  // autoplay: {
+  //   delay: 4500,
+  //   disableOnInteraction: false,
+  // },
+  on: {
+    slideChange: function slideChange() {
+      var activeIndex = this.activeIndex + 1;
+      var activeSlide = document.querySelector(".gallery-thumbs .swiper-slide:nth-child(".concat(activeIndex, ")"));
+      var nextSlide = document.querySelector(".gallery-thumbs .swiper-slide:nth-child(".concat(activeIndex + 1, ")"));
+      var prevSlide = document.querySelector(".gallery-thumbs .swiper-slide:nth-child(".concat(activeIndex - 1, ")"));
+
+      if (nextSlide && !nextSlide.classList.contains('swiper-slide-visible')) {
+        this.thumbs.swiper.slideNext();
+      } else if (prevSlide && !prevSlide.classList.contains('swiper-slide-visible')) {
+        this.thumbs.swiper.slidePrev();
+      }
+    }
+  }
+}); // color active 
+
+var btnActive = document.getElementsByClassName('first-screen__shift');
+var btns = document.getElementsByClassName('btn');
+
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function () {
+    var current = document.getElementsByClassName("btn-active");
+    current[0].className = current[0].className.replace(" btn-active", "");
+    this.className += " btn-active";
+  });
+}
+//# sourceMappingURL=main.js.map
