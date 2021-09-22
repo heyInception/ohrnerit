@@ -12,7 +12,7 @@
     background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
-    @include flex-all-center ;
+    @include flex-all-center;
     position: relative;
     border-radius: 24px;
     overflow: hidden;
@@ -61,7 +61,8 @@
             width: 100%;
             max-width: 500px;
             height: 100%;
-            object-fit: cover;
+            -o-object-fit: cover;
+               object-fit: cover;
         }
     }
 
@@ -72,7 +73,7 @@
 
     &__author {
         font-family: "TTSquaresCondensed", sans-serif;
-        font-size: .875rem;
+        font-size: 0.875rem;
         line-height: 1;
         color: var(--color-black);
         opacity: 0.4;
@@ -100,7 +101,7 @@
             background-color: rgba(0, 0, 0, 0.19);
             border-radius: 15px;
             padding: 0 10px;
-            @include flex-all-center ;
+            @include flex-all-center;
             &:hover {
                 background-color: var(--color-white);
                 svg {
@@ -111,7 +112,7 @@
                 }
             }
             span {
-                font-size: .75rem;
+                font-size: 0.75rem;
                 color: var(--color-black);
                 line-height: 1;
                 margin-left: 6px;
@@ -126,7 +127,7 @@
             border-radius: 15px;
             padding: 0 15px;
             height: 30px;
-            @include flex-all-center ;
+            @include flex-all-center;
             &:hover {
                 background-color: var(--color-black);
                 color: var(--color-white);
@@ -138,19 +139,19 @@
             }
             span {
                 margin-right: 10px;
-                font-size: .625rem;
+                font-size: 0.625rem;
             }
         }
     }
 
     &__place {
-        @include flex-all-center ;
+        @include flex-all-center;
         margin-bottom: 17px;
         button {
             background-color: var(--color-black);
             border-radius: 22px;
             font-family: "PexelGrotesk", sans-serif;
-            font-size: .75rem;
+            font-size: 0.75rem;
             width: 100%;
             height: 44px;
             color: var(--color-white);
@@ -188,7 +189,7 @@
     }
 
     &__name-bid {
-        font-size: .75rem;
+        font-size: 0.75rem;
         line-height: 1;
         color: rgba(0, 0, 0, 0.6);
         margin-bottom: 5px;
@@ -202,7 +203,7 @@
     }
 
     &__dollar-bid {
-        font-size: .625rem;
+        font-size: 0.625rem;
         line-height: 1;
         color: rgba(0, 0, 0, 0.4);
     }
@@ -249,7 +250,7 @@
                     }
                     &:last-child {
                         color: rgba(0, 0, 0, 0.4);
-                        font-size: .625rem;
+                        font-size: 0.625rem;
                         line-height: 1;
                     }
                 }
@@ -267,7 +268,7 @@
             height: 40px;
             padding: 0 21px;
             text-align: center;
-            &:hover{
+            &:hover {
                 color: var(--color-main);
                 background-color: var(--color-black);
             }
@@ -294,7 +295,6 @@
                 background-color: transparent;
                 color: var(--color-black);
             }
-            
         }
     }
 }
@@ -317,7 +317,7 @@
     font-size: 0.75rem;
     line-height: 1;
     border-radius: 20px;
-    transition: linear .2s;
+    transition: linear 0.2s;
 }
 .btn-active {
     background-color: var(--color-main);
@@ -331,7 +331,6 @@
 .btn-clear {
     color: var(--color-black);
     background-color: transparent;
-    
 }
 .gallery-thumbs .swiper-slide.swiper-slide-thumb-active {
     transform: scale(1);
@@ -370,7 +369,17 @@
     stroke-linecap: round;
     stroke-dasharray: 339px;
     stroke-dashoffset: 339px;
-    animation: circle-default 5s forwards;
+    -webkit-animation: circle-default 5s forwards;
+            animation: circle-default 5s forwards;
+}
+
+@-webkit-keyframes circle-default {
+    0% {
+        stroke-dashoffset: 339px;
+    }
+    100% {
+        stroke-dashoffset: 40px;
+    }
 }
 
 @keyframes circle-default {
@@ -441,16 +450,22 @@
         &__pagination {
             position: absolute;
             height: 90px;
-            left: 0;
-transform: translateX(0);
+            left: 20px;
+            transform: translateX(0);
             top: 550px;
             z-index: 99;
-            max-width: 325px;
+            max-width: 320px;
+            width: 100%;
             .swiper-slide {
-                width: 90px !important;
+                height: 100%;
+                justify-content: center;
+                transform: scale(0.6);
+                &:last-child {
+                    transform: scale(0.4);
+                }
             }
-            .swiper-wrapper {
-                transform: translate3d(0px, 0px, 0px) !important;
+            .swiper-slide.swiper-slide-thumb-active{
+                transform: scale(1);
             }
         }
         &__slider {

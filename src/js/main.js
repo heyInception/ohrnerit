@@ -1,15 +1,23 @@
 var galleryThumbs = new Swiper('.gallery-thumbs', {
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
+  centerInsufficientSlides: true,
+  slideToClickedSlide: true,
+  freeMode: true,
+  watchSlidesProgress: true,
+  draggable: false,
+  allowTouchMove: false,
+  slidesPerView: 4,
   breakpoints: {
-    1199: {
-      spaceBetween: 30,
-      slidesPerView: 4,
-      watchSlidesVisibility: true,
-      watchSlidesProgress: true,
-      centerInsufficientSlides: true,
+    1200: {
       direction: 'vertical',
-      slideToClickedSlide: true,
-      freeMode: true,
-      watchSlidesProgress: true,
+      spaceBetween: 0,
+      slidesPerView: 4,
+    },
+    1199: {
+      direction: 'horizontal',
+      spaceBetween: 0,
+      slidesPerView: 4,
     },
     768: {
       direction: 'horizontal',
@@ -19,32 +27,32 @@ var galleryThumbs = new Swiper('.gallery-thumbs', {
       watchSlidesVisibility: false,
       watchSlidesProgress: false,
       centerInsufficientSlides: false,
+      draggable: false,
     }
   }
 });
 const myswiper = new Swiper('.swiper', {
+  spaceBetween: 20,
   breakpoints: {
-    1199: {
+    1200: {
       direction: 'vertical',
+      loop: false,
+      allowTouchMove: false,
+    },
+    1199: {
+      direction: 'horizontal',
       loop: false,
       allowTouchMove: false,
     },
     768: {
       direction: 'horizontal',
       allowTouchMove: false,
+      touchRatio: 0
     }
   },
-  // Optional parameters
-
-
   // If we need pagination
   thumbs: {
     swiper: galleryThumbs
-  },
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
   },
   // autoplay: {
   //   delay: 4500,
@@ -77,9 +85,9 @@ let btnActive = document.getElementsByClassName('first-screen__shift');
 let btns = document.getElementsByClassName('btn')
 
 for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-  var current = document.getElementsByClassName("btn-active");
-  current[0].className = current[0].className.replace(" btn-active", "");
-  this.className += " btn-active";
+  btns[i].addEventListener("click", function () {
+    var current = document.getElementsByClassName("btn-active");
+    current[0].className = current[0].className.replace(" btn-active", "");
+    this.className += " btn-active";
   });
 }
