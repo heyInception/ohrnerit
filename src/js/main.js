@@ -46,10 +46,10 @@ const myswiper = new Swiper('.swiper', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  autoplay: {
-    delay: 4500,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 4500,
+  //   disableOnInteraction: false,
+  // },
 
   on: {
     slideChange: function () {
