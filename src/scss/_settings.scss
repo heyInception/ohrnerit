@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  line-height: 1.15;
 }
 
 *,
@@ -10,8 +11,9 @@ html {
 
 body {
   margin: 0;
-  font-family: "asd", sans-serif;
-  background-color: var(--color-white);
+font-size: 16px;
+background-color: #000;
+color: #000;
 }
 
 img {
@@ -25,45 +27,4 @@ a {
 ul {
   list-style: none;
   padding: 0;
-}
-
-.is-outer {
-  position: relative !important; // stylelint-disable-line declaration-no-important
-  left: -9999px !important; // stylelint-disable-line declaration-no-important
-}
-
-.site-container {
-  overflow: hidden;
-}
-
-.is-hidden {
-  display: none !important; // stylelint-disable-line declaration-no-important
-}
-
-.for-mobile {
-  display: none;
-
-  @include mobile {
-    display: block;
-  }
-}
-
-.error {
-  border: 2px #ff4019 solid !important; // stylelint-disable-line declaration-no-important
-}
-
-.btn-reset {
-  border: none;
-  background: transparent;
-  cursor: pointer;
-}
-
-.container {
-  margin: 0 auto;
-  padding: 0 15px;
-  max-width: 1200px;
-}
-
-.js-focus-visible :focus:not(.focus-visible) {
-  outline: none;
 }
