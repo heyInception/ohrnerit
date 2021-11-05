@@ -1,0 +1,95 @@
+//
+.header {
+    &__color {
+        background-color: #fff;
+    }
+    &__h {
+        height: 64px;
+    }
+    &__btn {
+        width: 100%;
+        height: 22px;
+        max-width: 117px;
+        border: 1px solid #71cd55;
+        border-radius: 20px;
+        background-color: #fff;
+        padding: 0 32px;
+        font-size: 16px;
+        font-family: "Eurostile";
+        color: rgb(113, 205, 85);
+        margin-left: 5px;
+    }
+    .nav-item {
+        .nav-link {
+            padding: 0 17px;
+            color: #000;
+        }
+    }
+    .nav-link {
+        position: relative;
+        font-size: 16px;
+        font-family: "Eurostile";
+        color: rgb(0, 0, 0);
+        font-weight: 400;
+        transition: linear 0.3s;
+    }
+    .nav-link.active {
+        font-weight: 700;
+        transition: linear .3s;
+        &::after {
+            position: absolute;
+            content: "";
+            left: 50%;
+            bottom: -32px;
+            transform: translateX(-50%);
+            background-image: url(/img/nav_active.svg);
+            background-repeat: no-repeat;
+            height: 10px;
+            width: 14px;
+        }
+    }
+    &__main {
+        background-image: url(/img/Header__bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 107px 0 103px;
+        margin-top: 80px;
+    }
+    &__title {
+        font-size: 53px;
+        font-family: "Eurostile Extd";
+        color: rgb(255, 255, 255);
+        line-height: 1.385;
+        text-align: left;
+    }
+    &__subtitle {
+        font-size: 25px;
+        font-family: "Eurostile";
+        color: rgb(113, 205, 85);
+        line-height: 1;
+        text-align: left;
+        padding-bottom: 37px;
+    }
+    &__button {
+        .btn {
+            background-color: #fff;
+            border-radius: 20px;
+            color: #000;
+            font-size: 25px;
+            font-weight: 700;
+            border: 1px solid #fff;
+            position: relative;
+            padding: 2px 63px 2px 37px;
+            &::after {
+                position: absolute;
+                content: '';
+                right: 24px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 27px;
+                height: 24px;
+                background-image: url(/img/btn__right.svg);
+            }
+        }
+    }
+}

@@ -1,0 +1,116 @@
+.team {
+    &__row {
+        padding-bottom: 90px;
+    }
+    &__title {
+        font-size: 35px;
+        font-family: "Eurostile Extd";
+        color: rgb(12, 20, 30);
+        line-height: 1.2;
+        text-align: left;
+        padding-bottom: 13px;
+        padding-top: 60px;
+    }
+    &__subtitle {
+        font-size: 25px;
+        font-family: "Eurostile";
+        color: rgb(113, 205, 85);
+        line-height: 1.2;
+        text-align: left;
+        padding-bottom: 22px;
+    }
+    &__text {
+        font-size: 22px;
+        font-family: "Eurostile";
+        color: rgb(60, 60, 60);
+        line-height: 1.273;
+        text-align: left;
+        padding-bottom: 35px;
+        border-bottom: 1px solid #d9d9da;
+    }
+    &__link {
+        padding-top: 20px;
+        span {
+            padding-left: 15px;
+            font-size: 22px;
+            font-family: "Eurostile";
+            color: rgb(113, 205, 85);
+            line-height: 1.045;
+            text-align: left;
+            font-weight: 700;
+        }
+    }
+    &__icon {
+        &::after {
+            content: url(/img/team__icon.svg);
+        }
+    }
+    &__img {
+        position: relative;
+        img {
+            position: absolute;
+            left: -2rem;
+            top: 0;
+        }
+    }
+    &__list {
+        ul {
+            list-style: none;
+            margin: 0;
+            padding-top: 40px;
+            li {
+                font-size: 22px;
+                font-family: "Eurostile";
+                color: rgb(0, 0, 0);
+                font-weight: 700;
+                margin-bottom: 25px;
+                padding-left: 45px;
+                position: relative;
+                max-width: 470px;
+                &::after {
+                    position: absolute;
+                    content: "";
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background-image: url(/img/team__plus.svg);
+                    width: 34px;
+                    height: 34px;
+                }
+            }
+        }
+    }
+    &__desc {
+        p {
+            font-size: 22px;
+            font-family: "Eurostile";
+            color: rgb(59, 59, 59);
+            line-height: 1.273;
+            text-align: center;
+        }
+    }
+    &__button {
+        text-align: center;
+        padding-top: 22px;
+        .btn {
+            background-color: #71cd55;
+            border-radius: 20px;
+            color: #fff;
+            font-size: 25px;
+            font-weight: 700;
+            border: 1px solid #71cd55;
+            position: relative;
+            padding: 2px 63px 2px 37px;
+            &::after {
+                position: absolute;
+                content: "";
+                right: 24px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 27px;
+                height: 24px;
+                background-image: url(/img/btn__right--white.svg);
+            }
+        }
+    }
+}

@@ -1,0 +1,73 @@
+.offer {
+    background-image: url(/img/offer__bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__row {
+        padding: 73px 0;
+    }
+    &__header {
+        font-size: 35px;
+        font-family: "Eurostile Extd";
+        color: rgb(255, 255, 255);
+        line-height: 1.2;
+        text-align: center;
+        padding-bottom: 36px;
+    }
+    &__subheader {
+        font-size: 25px;
+        font-family: "Eurostile";
+        color: rgb(113, 205, 85);
+        line-height: 1.2;
+        text-align: center;
+        padding-bottom: 60px;
+    }
+    &__col {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        span {
+            font-size: 22px;
+            font-family: "Eurostile";
+            color: rgb(255, 255, 255);
+            line-height: 1.227;
+            text-align: left;
+            margin-left: -15px;
+        }
+    }
+    &__icon {
+        vertical-align: middle;
+        &--1 {
+            &::after {
+                content: url(/img/offer__icon-1.svg);
+            }
+        }
+        &--2 {
+            &::after {
+                content: url(/img/offer__icon-2.svg);
+            }
+        }
+        &--3 {
+            &::after {
+                content: url(/img/offer__icon-3.svg);
+            }
+        }
+        &--4 {
+            &::after {
+                content: url(/img/offer__icon-4.svg);
+            }
+        }
+        &--5 {
+            &::after {
+                content: url(/img/offer__icon-5.svg);
+            }
+        }
+        &--6 {
+            &::after {
+                content: url(/img/offer__icon-6.svg);
+            }
+        }
+    }
+}
+.mb-20 {
+    margin-bottom: 20px;
+}

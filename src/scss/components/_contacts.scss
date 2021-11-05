@@ -1,0 +1,279 @@
+.contacts {
+    background-color: #fafafa;
+    &__row {
+        padding: 40px 0 100px;
+    }
+
+    &__img {
+        img {
+            vertical-align: bottom;
+        }
+    }
+
+    &__caption {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+        background-color: #71cd55;
+        padding: 0 23px;
+        height: 100px;
+        span {
+            max-width: 250px;
+            font-size: 22px;
+            font-family: "Eurostile";
+            color: rgb(255, 255, 255);
+            line-height: 1.273;
+            text-align: left;
+            padding-left: 20px;
+        }
+    }
+
+    &__icon {
+        &::after {
+            content: url(/img/contacts__icon.svg);
+            width: 41px;
+            height: 27px;
+        }
+    }
+
+    &__info {
+        background-color: #d7d7d7;
+        padding: 35px 32px;
+        margin-top: 32px;
+    }
+
+    &__name {
+        font-size: 30px;
+        font-family: "Eurostile";
+        color: rgb(255, 255, 255);
+        line-height: 1.167;
+        text-align: left;
+        margin-bottom: 22px;
+    }
+
+    &__subname {
+        font-size: 22px;
+        font-family: "Eurostile";
+        color: rgb(113, 205, 85);
+        line-height: 1.2;
+        text-align: left;
+        margin-bottom: 38px;
+    }
+
+    &__data {
+        display: flex;
+        flex-flow: column;
+        span {
+            font-size: 22px;
+            font-family: "Eurostile";
+            color: rgb(255, 255, 255);
+            line-height: 1.591;
+            text-align: left;
+            padding-left: 17px;
+            max-width: 275px;
+        }
+        a {
+            display: flex;
+            align-items: center;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+        }
+    }
+
+    &__title {
+        font-size: 35px;
+        font-family: "Eurostile Extd";
+        color: rgb(0, 0, 0);
+        line-height: 0.878;
+        text-align: left;
+        margin-bottom: 25px;
+    }
+
+    &__subtitle {
+        font-size: 28px;
+        font-family: "Eurostile";
+        color: rgb(113, 205, 85);
+        line-height: 1.2;
+        text-align: left;
+        margin-bottom: 38px;
+    }
+
+    &__text {
+        font-size: 22px;
+        font-family: "Eurostile";
+        color: rgb(59, 59, 59);
+        line-height: 1.273;
+        text-align: left;
+    }
+
+    &__form {
+        margin-top: 38px;
+        input[type="checkbox"]:checked {
+            background-image: url(/img/checkbox.svg);
+        }
+        input[type="checkbox"] {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 24px;
+            height: 24px;
+            border: none;
+            outline: none;
+            border-radius: 0;
+            position: absolute;
+            left: 0;
+            background-color: rgba(144, 155, 161, 0.2);
+            background-size: 14px;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+    &__upload {
+        padding: 12px 0 32px;
+        label {
+            font-size: 22px;
+            font-family: "Eurostile";
+            color: rgb(59, 59, 59);
+            line-height: 1.227;
+            text-align: left;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        input {
+            display: none;
+        }
+    }
+    &__req {
+        position: relative;
+        &::before {
+            content: "*";
+            position: absolute;
+            top: 0;
+            left: -10px;
+            width: 20px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 22px;
+            font-weight: bold;
+            color: rgb(113, 205, 85);
+        }
+    }
+}
+.icon {
+    &__tel {
+        &::after {
+            content: url(/img/icon__phone.svg);
+            margin: 0 4px;
+        }
+    }
+
+    &__fax {
+        &::after {
+            content: url(/img/icon__fax.svg);
+        }
+    }
+
+    &__mail {
+        &::after {
+            content: url(/img/icon__mail.svg);
+        }
+    }
+
+    &__loc {
+        &::after {
+            content: url(/img/icon__loc.svg);
+            margin: 0 3px;
+        }
+    }
+    &__upload {
+        padding-right: 16px;
+        &::after {
+            content: url(/img/icon__upload.svg);
+        }
+    }
+}
+
+.loc {
+    display: flex;
+}
+
+.form-control {
+    font-size: 22px;
+    font-family: "Eurostile";
+    color: rgb(59, 59, 59);
+    line-height: 1.227;
+    text-align: left;
+    height: 50px;
+    box-shadow: none;
+    outline: 0;
+    border: 1px solid #ffffff;
+    border-radius: 0px;
+    background-color: #ffffff;
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+}
+.your-name {
+    margin-bottom: 10px;
+    display: block;
+}
+.company {
+    margin-bottom: 10px;
+    display: block;
+}
+.city {
+    margin-bottom: 10px;
+    display: block;
+}
+.your-email {
+    margin-bottom: 10px;
+    display: block;
+}
+.your-phone {
+    margin-bottom: 10px;
+    display: block;
+}
+.your-message {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.terms {
+    position: relative;
+    display: block;
+    margin-bottom: 45px;
+}
+.form-list-item {
+    margin-left: 0;
+    margin-top: 10px;
+    display: inline-block;
+    label {
+        padding-left: 34px;
+        font-weight: 300;
+        line-height: 17px;
+        display: inline-block;
+        margin-bottom: 0.5rem;
+    }
+}
+.form-list-item-label {
+}
+.form-submit {
+    background-color: #71cd55;
+    font-size: 22px;
+    font-family: "Eurostile";
+    color: white;
+    line-height: 1;
+    text-align: center;
+    border: 1px solid #71cd55;
+    border-radius: 20px;
+    padding: 8px 37px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.required {
+    font-size: 22px;
+    font-family: "Eurostile";
+    color: #000;
+    line-height: 0.773;
+}

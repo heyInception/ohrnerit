@@ -1,6 +1,5 @@
 html {
   box-sizing: border-box;
-  line-height: 1.15;
 }
 
 *,
@@ -8,12 +7,17 @@ html {
 *::after {
   box-sizing: inherit;
 }
+*:focus {
+  outline: none;
+}
 
 body {
   margin: 0;
+  font-family: "Eurostile", sans-serif;
+  background-color: var(--color-white);
   font-size: 16px;
-  background-color: #000;
-  color: #000;
+  font-weight: 400;
+  padding: 0;
 }
 
 img {
@@ -27,4 +31,45 @@ a {
 ul {
   list-style: none;
   padding: 0;
+}
+
+.btn-reset {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {   
+  border-color: #000 !important;
+  box-shadow: none !important;
+  outline: 0 none !important;
+}
+.text-right {
+  text-align: right;
+}
+textarea.form-control {
+  padding: 12px !important;
+  height: auto;
+  max-width: 729px;
+}
+.pl-70 {
+  padding-left: 70px !important;
 }

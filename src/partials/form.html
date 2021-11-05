@@ -1,0 +1,114 @@
+<form action="" method="post" class="" novalidate="novalidate"
+    data-status="init">
+    <div class="row contacts__req">
+        <div class="col-sm-12">
+            <span class=" your-name">
+                <input
+                    type="text"
+                    name="your-name"
+                    value=""
+                    size="40"
+                    class="form-control"
+                    aria-required="true"
+                    aria-invalid="false"
+                    placeholder="Vor-und Nachname"
+                    />
+            </span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <span class=" company"><input type="text"
+                    name="company" value="" size="40" class="form-control" aria-invalid="false"
+                    placeholder="Firmenname" /></span>
+        </div>
+        <div class="col-sm-6">
+            <span class=" city"><input type="text"
+                    name="city" value="" size="40" class="form-control" aria-invalid="false"
+                    placeholder="Ort" /></span>
+        </div>
+    </div>
+    <div class="row contacts__req">
+        <div class="col-sm-6">
+            <span class=" your-email">
+                <input
+                    type="email"
+                    name="your-email"
+                    value=""
+                    size="40"
+                    class="form-control"
+                    aria-required="true"
+                    aria-invalid="false"
+                    placeholder="E-Mail"
+                    />
+            </span>
+        </div>
+        <div class="col-sm-6">
+            <span class=" your-phone">
+                <input
+                    type="tel"
+                    name="your-phone"
+                    value=""
+                    size="40"
+                    class="form-control"
+                    aria-required="true"
+                    aria-invalid="false"
+                    placeholder="Telefon"
+                    />
+            </span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="contacts__upload">
+                <label for="file"><i class="icon__upload"></i>Datei hochladen</label>
+                <input type="file" id="file" name="file" multiple>
+              </div>
+        </div>
+    </div>
+    <div class="row contacts__req">
+        <div class="col-sm-12">
+            <span class=" your-message">
+                <textarea
+                    name="your-message"
+                    cols="40"
+                    rows="6"
+                    class="form-control"
+                    aria-required="true"
+                    aria-invalid="false"
+                    placeholder="Erzählen Sie uns von Ihrem Anliegen..."></textarea>
+            </span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <span class=" terms">
+                <span>
+                    <span class="form-list-item">
+                        <label>
+                            <input type="checkbox" name="terms" value="1"
+                                aria-invalid="false" />
+                            <span class="form-list-item-label">
+                                Ja, ich habe die <a href="#">Datenschutzerklärung</a>
+                                zur Kenntnis genommen und bin damit
+                                einverstanden, dass die von mir angegebenen
+                                Daten elektronisch erhoben und gespeichert
+                                werden. Meine Daten werden
+                                dabei nur streng zweckgebunden zur Bearbeitung
+                                und Beantwortung meiner Anfrage genutzt.
+                            </span>
+                        </label>
+                    </span>
+                </span>
+            </span>
+        </div>
+    </div>
+    <div class="row justify-content-between">
+        <div class="col-sm-6">
+            <input type="submit" value="Absenden" class="form-form-control form-submit" />
+        </div>
+        <div class="col-sm-6 text-right required">
+            <strong><span style="color: rgb(113, 205, 85);">*</span> Pflichtfelder</strong>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,99 @@
+.news {
+    &__title {
+        font-size: 35px;
+        font-family: "Eurostile Extd";
+        color: rgb(12, 20, 30);
+        line-height: 1.2;
+        text-align: left;
+        padding-bottom: 21px;
+    }
+    &__subtitle {
+        font-size: 25px;
+        font-family: "Eurostile";
+        color: rgb(113, 205, 85);
+        line-height: 1;
+        text-align: left;
+    }
+    &__button {
+        text-align: center;
+        padding-top: 22px;
+        &--left {
+            text-align: left;
+            padding-top: 0;
+        }
+        .btn {
+            background-color: #71cd55;
+            border-radius: 20px;
+            color: #fff;
+            font-size: 25px;
+            font-weight: 700;
+            border: 1px solid #71cd55;
+            position: relative;
+            padding: 2px 63px 2px 37px;
+            &::after {
+                position: absolute;
+                content: "";
+                right: 24px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 27px;
+                height: 24px;
+                background-image: url(/img/btn__right--white.svg);
+            }
+        }
+        .btn.newsbtn {
+            font-size: 22px;
+            font-family: "Eurostile";
+            color: rgb(255, 255, 255);
+            line-height: 1;
+            text-align: center;
+            padding: 8px 37px;
+            &::after {
+                content: unset;
+            }
+        }
+    }
+    &__card {
+        box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.2);
+        margin-bottom: 32px;
+    }
+    &__img {
+        img {
+            width: 100%;
+        }
+    }
+    &__padd {
+        padding: 31px 30px;
+    }
+    &__top {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 25px;
+        span {
+            font-size: 19px;
+            font-family: "Eurostile";
+            color: rgb(113, 205, 85);
+            line-height: 1.421;
+            text-align: left;
+        }
+    }
+    &__headline {
+        font-size: 19px;
+        font-family: "Eurostile";
+        color: rgb(29, 29, 27);
+        line-height: 1;
+        text-align: left;
+        font-weight: 700;
+        margin-bottom: 25px;
+    }
+    &__text {
+        font-size: 19px;
+        font-family: "Eurostile";
+        color: rgb(59, 59, 59);
+        line-height: 1.316;
+        text-align: left;
+        margin-bottom: 40px;
+    }
+}
